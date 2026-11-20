@@ -18,7 +18,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Solenia Suarez\n\nEmail: s.suarez30@ncf.edu\nGitHub: solenia-21\nFinal project repository: D1 Softball Batting\nNew College of Florida"
+    "text": "My name is Solenia Suarez, and I play college softball while studying at New College of Florida. You can email me, find me on GitHub, or visit the D1 Softball Batting final project repository.\nThis project uses NCAA Division I softball batting data, stored in the project as batting.csv. It includes player-season statistics such as batting average, on-base percentage, slugging percentage, home runs, walks, and strikeouts. See the official NCAA Division I softball statistics."
   },
   {
     "objectID": "non-correlations.html",

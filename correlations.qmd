@@ -1,0 +1,54 @@
+---
+title: "Correlations"
+format: html
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+
+batting_raw <- read_csv("data/batting.csv", show_col_types = FALSE) |>
+  mutate(Season = as.character(Season))
+
+batting <- batting_raw |>
+  filter(PA >= 50)
+
+set.seed(42)
+```
+
+This page uses static snapshots of the same D1 Softball batting data as the Explorer. Each plot shows player-seasons with at least 50 plate appearances; Pearson's _r_ summarizes the direction and strength of a linear association.
+
+## Batting average and on-base percentage
+
+The plot compares batting average with on-base percentage (OBP), which also counts reaching base via walks and hit-by-pitches. Their Pearson correlation is **0.84**. A positive association is expected because hits contribute to both measures, while differences from the trend can reflect players' walks and other ways of reaching base.
+
+This relationship is descriptive, not causal: it does not mean that increasing batting average by itself causes a particular OBP. The spread around the trend is useful because it shows how much OBP can differ for players with similar batting averages.
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+ggplot(batting, aes(BA, OBP)) +
+  geom_point(color = "#1f4e79", alpha = 0.45, size = 1.5) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linewidth = 0.8) +
+  labs(x = "Batting Average (BA)", y = "On-Base Percentage (OBP)") +
+  theme_minimal()
+```
+
+## Batting average and slugging percentage
+
+Slugging percentage (SLG) gives extra weight to doubles, triples, and home runs. Its Pearson correlation with batting average is **0.75**. A positive association reflects that hits drive both statistics, but players with similar batting averages can have different slugging percentages depending on how many hits go for extra bases.
+
+The fitted line summarizes the overall linear trend; it does not capture every difference in power or playing time. Each dot is a player-season, so the same player may appear once per season.
+
+```{r}
+#| echo: false
+#| fig-width: 7
+#| fig-height: 5
+ggplot(batting, aes(BA, SLG)) +
+  geom_point(color = "#1f4e79", alpha = 0.45, size = 1.5) +
+  geom_smooth(method = "lm", se = FALSE, color = "red", linewidth = 0.8) +
+  labs(x = "Batting Average (BA)", y = "Slugging Percentage (SLG)") +
+  theme_minimal()
+```

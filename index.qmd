@@ -1,0 +1,7 @@
+---
+title: "D1 Softball Batting"
+---
+
+Explore NCAA Division I softball batting statistics with the [Interactive plot](explorer.qmd), or read about stronger relationships on the [Correlations page](correlations.qmd) and weaker relationships on the [Non-correlations page](non-correlations.qmd).
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNzGOpa0zYvVgouR3cxy4oEBfyq5aZqJTskGK_5NCcxg&amp;s=10" alt="9 of the top college softball home run hitters in 2021 | NCAA.com" style="width: 100%; height: auto;">

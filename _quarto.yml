@@ -13,3 +13,6 @@ website:
         text: Correlations
       - href: non-correlations.qmd
         text: Non-correlations
+    right:
+      - href: about.qmd
+        text: About

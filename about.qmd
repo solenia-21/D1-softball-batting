@@ -1,0 +1,7 @@
+---
+title: "About"
+---
+
+My name is **Solenia Suarez**, and I play college softball while studying at [New College of Florida](https://www.ncf.edu/). You can [email me](mailto:s.suarez30@ncf.edu) at s.suarez30@ncf.edu, find me on [GitHub](https://github.com/solenia-21) at solenia-21, or visit the [D1 Softball Batting final project repository](https://github.com/solenia-21/D1-softball-batting).
+
+This project uses NCAA Division I softball batting data, stored in the project as [batting.csv](data/batting.csv). It includes player-season statistics such as batting average, on-base percentage, slugging percentage, home runs, walks, and strikeouts. See the [official NCAA Division I softball statistics](https://www.ncaa.com/stats/softball/d1).
